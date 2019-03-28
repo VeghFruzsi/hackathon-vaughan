@@ -21,9 +21,3 @@ Szapp Anna,+36208725167,Szajol,Szolnok
 Trab Antal,+36308192568,Tata,Tatabanya
 Ultra Viola,+36208263751,Letenye,Zalaegerszeg
 Zuhany Rozsa,+36703020380,Budapest,Budapest
- 
-
- 
-
- 
- 

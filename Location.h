@@ -21,6 +21,7 @@ enum class County {
     DEBRECEN,
     NYIREGYHAZA,
     MISKOLC,
+    INVALID
 };
 
 enum class Region {

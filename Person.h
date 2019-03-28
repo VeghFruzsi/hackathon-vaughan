@@ -25,6 +25,12 @@ public:
 protected:
     std::string name;
     std::string number;
+public:
+    const std::string &getNumber() const;
+
+    void setNumber(const std::string &number);
+
+protected:
     County personLocation;
 public:
     County getPersonLocation() const;

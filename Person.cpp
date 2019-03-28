@@ -32,3 +32,13 @@ County Person::getPersonLocation() const {
 void Person::setPersonLocation(County personLocation) {
     Person::personLocation = personLocation;
 }
+
+const std::string &Person::getNumber() const
+{
+    return number;
+}
+
+void Person::setNumber(const std::string &number)
+{
+    Person::number = number;
+}

@@ -3,4 +3,4 @@ project(hackathon_vaughan)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(hackathon_vaughan main.cpp)
+add_executable(hackathon_vaughan main.cpp BaseStation.cpp BaseStation.h Person.cpp Person.h Tower.cpp Tower.h)

@@ -82,6 +82,22 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.hackathon_vaughan">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hackathon_vaughan" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hackathon_vaughan" TARGET_NAME="hackathon_vaughan" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hackathon_vaughan" RUN_TARGET_NAME="hackathon_vaughan">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.hackathon_vaughan" />
+    </list>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>

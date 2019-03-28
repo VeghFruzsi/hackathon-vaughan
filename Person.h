@@ -14,7 +14,7 @@ public:
 
     void setName(const std::string &name);
 
-    Person(const std::string &name, const std::string &number, Location personLocation, int towerToPersonID);
+    Person(const std::string &name, const std::string &number, County personLocation, int towerToPersonID);
 
     Person(const std::string &name);
 
@@ -25,11 +25,11 @@ public:
 protected:
     std::string name;
     std::string number;
-    Location personLocation;
+    County personLocation;
 public:
-    Location getPersonLocation() const;
+    County getPersonLocation() const;
 
-    void setPersonLocation(Location personLocation);
+    void setPersonLocation(County personLocation);
 
 protected:
     int towerToPersonID;

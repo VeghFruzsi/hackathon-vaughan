@@ -6,7 +6,7 @@
 
 Person::Person(const std::string &name) : name(name) {}
 
-Person::Person(const std::string &name, const std::string &number, Location personLocation, int towerToPersonID) : name(
+Person::Person(const std::string &name, const std::string &number, County personLocation, int towerToPersonID) : name(
         name), number(number), personLocation(personLocation), towerToPersonID(towerToPersonID) {}
 
 const std::string &Person::getName() const {
@@ -25,10 +25,10 @@ std::string Person::answeringACall(std::string input) {
     return std::__cxx11::string();
 }
 
-Location Person::getPersonLocation() const {
+County Person::getPersonLocation() const {
     return personLocation;
 }
 
-void Person::setPersonLocation(Location personLocation) {
+void Person::setPersonLocation(County personLocation) {
     Person::personLocation = personLocation;
 }

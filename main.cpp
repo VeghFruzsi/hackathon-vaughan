@@ -23,7 +23,15 @@ int main() {
         }
     }
 
-    std::cout << "Hello, World!" << std::endl;
+    Tower tower1;
+    tower1.setTowerLocation(County::GYOR);
+    Person person1("Nrtkh");
+    person1.setPersonLocation(County::GYOR);
+
+    if(person1.getPersonLocation() == tower1.getTowerLocation()){
+        std::cout << "jeeeejejejejjeeee" << std::endl;
+    }
+
     return 0;
 }
 
@@ -57,4 +65,3 @@ std::vector<Person> readFromFile(std::string fileName){
     file.close();
     return person;
 }
-

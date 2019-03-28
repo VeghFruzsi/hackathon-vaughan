@@ -1,11 +1,7 @@
-//
-// Created by malajabi on 3/28/2019.
-//
-
 #ifndef HACKATHON_VAUGHAN_LOCATION_H
 #define HACKATHON_VAUGHAN_LOCATION_H
 
-enum class Location {
+enum class County {
     SZOMBATHELY,
     GYOR,
     ZALAEGERSZEG,
@@ -31,10 +27,6 @@ enum class Region {
     Dunantul,
     DunaTiszaKoze,
     Tiszantul,
-
-};
-
-class Location {
 
 };
 

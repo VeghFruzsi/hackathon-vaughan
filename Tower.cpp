@@ -7,7 +7,7 @@
 
 Tower::Tower() {}
 
-Tower::Tower(int towerID, Location towerLocation, const std::string &baseStation) : towerID(towerID),
+Tower::Tower(int towerID, County towerLocation, const std::string &baseStation) : towerID(towerID),
                                                                                          towerLocation(towerLocation),
                                                                                          baseStation(baseStation) {}
 
@@ -19,11 +19,11 @@ void Tower::setTowerID(int towerID) {
     Tower::towerID = towerID;
 }
 
-Location Tower::getTowerLocation() const {
+County Tower::getTowerLocation() const {
     return towerLocation;
 }
 
-void Tower::setTowerLocation(Location towerLocation) {
+void Tower::setTowerLocation(County towerLocation) {
     Tower::towerLocation = towerLocation;
 }
 

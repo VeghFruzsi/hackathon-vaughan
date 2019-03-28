@@ -7,7 +7,6 @@ std::vector<Person> readFromPersonFile(std::string fileName){
         std::cout << "Open\n" << std::endl;
     } else {
         std::cout << "Your file is closed" << std::endl;
-        throw 2;
     }
     std::string line;
     while (std::getline(file, line)) {

@@ -6,20 +6,13 @@
 #define HACKATHON_VAUGHAN_BASESTATION_H
 
 #include <string>
-
-enum class Location {
-    Dunantul,
-    DunaTiszaKoze,
-    Tiszantul,
-
-};
-
+#include "Location.h"
 
 class BaseStation {
 public:
     BaseStation();
 
-    BaseStation(Location baseStationLocation, int towersToBaseStation);
+    BaseStation(Region baseStationLocation, int towersToBaseStation);
 
     void chooseATower();
 
@@ -27,9 +20,9 @@ public:
 
     void callToBaseStation(std::string buffer);
 
-    Location getBaseStationLocation() const;
+    Region getBaseStationLocation() const;
 
-    void setBaseStationLocation(Location baseStationLocation);
+    void setBaseStationLocation(Region baseStationLocation);
 
     int getTowersToBaseStation() const;
 
@@ -40,7 +33,7 @@ public:
     void setBaseStationBuffer(const std::string &BaseStationBuffer);
 
 protected:
-    Location baseStationLocation;
+    Region baseStationLocation;
     int towersToBaseStation;
     std::string BaseStationBuffer;
 

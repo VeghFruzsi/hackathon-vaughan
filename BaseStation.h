@@ -5,13 +5,14 @@
 #ifndef HACKATHON_VAUGHAN_BASESTATION_H
 #define HACKATHON_VAUGHAN_BASESTATION_H
 
-enum class Location{
+#include <string>
+
+enum class Location {
     Dunantul,
     DunaTiszaKoze,
     Tiszantul,
 
 };
-
 
 
 class BaseStation {
@@ -22,12 +23,26 @@ public:
 
     void chooseATower();
 
-    void callToTower();
-    void callToBaseStation();
+    void callToTower(std::string buffer);
+
+    void callToBaseStation(std::string buffer);
+
+    Location getBaseStationLocation() const;
+
+    void setBaseStationLocation(Location baseStationLocation);
+
+    int getTowersToBaseStation() const;
+
+    void setTowersToBaseStation(int towersToBaseStation);
+
+    const std::string &getBaseStationBuffer() const;
+
+    void setBaseStationBuffer(const std::string &BaseStationBuffer);
 
 protected:
     Location baseStationLocation;
     int towersToBaseStation;
+    std::string BaseStationBuffer;
 
 
 };

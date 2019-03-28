@@ -2,13 +2,14 @@
 // Created by Titkos on 28/03/2019.
 //
 
+#include <iostream>
 #include "Tower.h"
 
 Tower::Tower() {}
 
-Tower::Tower(int towerID, Location towerLocation, const std::string &baseStation) : towerID(towerID),
-                                                                                    towerLocation(towerLocation),
-                                                                                    baseStation(baseStation) {}
+Tower::Tower(int towerID, TowerLocation towerLocation, const std::string &baseStation) : towerID(towerID),
+                                                                                         towerLocation(towerLocation),
+                                                                                         baseStation(baseStation) {}
 
 int Tower::getTowerID() const {
     return towerID;
@@ -18,11 +19,11 @@ void Tower::setTowerID(int towerID) {
     Tower::towerID = towerID;
 }
 
-Location Tower::getTowerLocation() const {
+TowerLocation Tower::getTowerLocation() const {
     return towerLocation;
 }
 
-void Tower::setTowerLocation(Location towerLocation) {
+void Tower::setTowerLocation(TowerLocation towerLocation) {
     Tower::towerLocation = towerLocation;
 }
 
@@ -34,6 +35,18 @@ void Tower::setBaseStation(const std::string &baseStation) {
     Tower::baseStation = baseStation;
 }
 
-void Tower::callToBaseStation() {
+void Tower::callToBaseStation(std::string buffer) {
+    std::cout << "call from tower is enroute to base station : " << buffer << std::endl;
+}
 
+void Tower::callToPerson(std::string buffer) {
+
+}
+
+const std::string &Tower::getTowerBuffer() const {
+    return towerBuffer;
+}
+
+void Tower::setTowerBuffer(const std::string &towerBuffer) {
+    Tower::towerBuffer = towerBuffer;
 }

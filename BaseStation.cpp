@@ -7,7 +7,7 @@
 
 BaseStation::BaseStation() {}
 
-BaseStation::BaseStation(Location baseStationLocation, int towersToBaseStation) : baseStationLocation(
+BaseStation::BaseStation(Region baseStationLocation, int towersToBaseStation) : baseStationLocation(
         baseStationLocation), towersToBaseStation(towersToBaseStation) {
 
 }
@@ -24,11 +24,11 @@ void BaseStation::callToBaseStation(std::string buffer) {
     std::cout << "the call from base is enroute tho another base" << buffer << std::endl;
 }
 
-Location BaseStation::getBaseStationLocation() const {
+Region BaseStation::getBaseStationLocation() const {
     return baseStationLocation;
 }
 
-void BaseStation::setBaseStationLocation(Location baseStationLocation) {
+void BaseStation::setBaseStationLocation(Region baseStationLocation) {
     BaseStation::baseStationLocation = baseStationLocation;
 }
 

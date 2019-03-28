@@ -5,45 +5,22 @@
 #ifndef HACKATHON_VAUGHAN_TOWER_H
 #define HACKATHON_VAUGHAN_TOWER_H
 
-enum class TowerLocation {
-    SZOMBATHELY,
-    GYOR,
-    ZALAEGERSZEG,
-    VESZPREM,
-    KAPOSVAR,
-    PECS,
-    SZEKSZARD,
-    SZEKESFEHERVAR,
-    TATABANYA,
-    BUDAPEST,
-    KECSKEMET,
-    SZEGED,
-    SZOLNOK,
-    SALGOTARJAN,
-    EGER,
-    BEKESCSABA,
-    DEBRECEN,
-    NYIREGYHAZA,
-    MISKOLC,
-};
-
-
+#include "Location.h"
 #include <string>
-
 
 class Tower {
 public:
     Tower();
 
-    Tower(int towerID, TowerLocation towerLocation, const std::string &baseStation);
+    Tower(int towerID, Location towerLocation, const std::string &baseStation);
 
     int getTowerID() const;
 
     void setTowerID(int towerID);
 
-    TowerLocation getTowerLocation() const;
+    Location getTowerLocation() const;
 
-    void setTowerLocation(TowerLocation towerLocation);
+    void setTowerLocation(Location towerLocation);
 
     const std::string &getBaseStation() const;
 
@@ -59,7 +36,7 @@ public:
 
 protected:
     int towerID;
-    TowerLocation towerLocation;
+    Location towerLocation;
     std::string baseStation;
     std::string towerBuffer;
 

@@ -6,29 +6,7 @@
 #define HACKATHON_VAUGHAN_PERSON_H
 
 #include <string>
-
-enum class PersonLocation {
-    SZOMBATHELY,
-    GYOR,
-    ZALAEGERSZEG,
-    VESZPREM,
-    KAPOSVAR,
-    PECS,
-    SZEKSZARD,
-    SZEKESFEHERVAR,
-    TATABANYA,
-    BUDAPEST,
-    KECSKEMET,
-    SZEGED,
-    SZOLNOK,
-    SALGOTARJAN,
-    EGER,
-    BEKESCSABA,
-    DEBRECEN,
-    NYIREGYHAZA,
-    MISKOLC,
-};
-
+#include "Location.h"
 
 class Person {
 public:
@@ -36,7 +14,7 @@ public:
 
     void setName(const std::string &name);
 
-    Person(const std::string &name, const std::string &number, PersonLocation personLocation, int towerToPersonID);
+    Person(const std::string &name, const std::string &number, Location personLocation, int towerToPersonID);
 
     Person(const std::string &name);
 
@@ -47,7 +25,13 @@ public:
 protected:
     std::string name;
     std::string number;
-    PersonLocation personLocation;
+    Location personLocation;
+public:
+    Location getPersonLocation() const;
+
+    void setPersonLocation(Location personLocation);
+
+protected:
     int towerToPersonID;
 
 };

@@ -1,4 +1,4 @@
-ToolSet: w64 6.0 (local)@C:\Users\Fruzsi\GREENFOX\OPENCV-1\Files\x86_64-8.1.0-posix-sjlj-rt_v6-rev0\mingw64
+ToolSet: w64 6.0@C:\Users\Andi\greenfox\x86_64-8.1.0-posix-sjlj-rt_v6-rev0\mingw64
 Options: 
 
 Options:

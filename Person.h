@@ -7,7 +7,7 @@
 
 #include <string>
 
-enum class Location {
+enum class PersonLocation {
     SZOMBATHELY,
     GYOR,
     ZALAEGERSZEG,
@@ -30,21 +30,24 @@ enum class Location {
 };
 
 
-
 class Person {
 public:
     const std::string &getName() const;
+
     void setName(const std::string &name);
-    Person(const std::string &name, const std::string &number, Location personLocation, int towerToPersonID);
+
+    Person(const std::string &name, const std::string &number, PersonLocation personLocation, int towerToPersonID);
+
     Person(const std::string &name);
 
     std::string makingACall(std::string input);
+
     std::string answeringACall(std::string input);
 
 protected:
     std::string name;
     std::string number;
-    Location personLocation;
+    PersonLocation personLocation;
     int towerToPersonID;
 
 };

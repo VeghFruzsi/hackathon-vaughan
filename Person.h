@@ -33,7 +33,7 @@ public:
 protected:
     County personLocation;
 public:
-    County getPersonLocation() const;
+    std::string getPersonLocation() const;
 
     void setPersonLocation(County personLocation);
 

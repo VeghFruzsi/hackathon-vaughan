@@ -18,7 +18,7 @@ public:
 
     void setTowerID(int towerID);
 
-    County getTowerLocation() const;
+    std::string getTowerLocation() const;
 
     void setTowerLocation(County towerLocation);
 

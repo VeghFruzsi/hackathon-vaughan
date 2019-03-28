@@ -2,7 +2,6 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
-#include <cstdlib>
 #include <ctime>
 
 #include "BaseStation.h"
@@ -13,12 +12,14 @@
 
 int main() {
 
+
     srand(time(NULL));
     std::vector<Person> person = readFromPersonFile("../person.txt");
     std::vector<Tower> towerVector = readFromTowerFile("../tower.txt");
 
     int randomCallerIndex;
     int randomRecipientIndex;
+
     randomCallerIndex = rand() % (int)person.size() + 1;
     AGAIN:
     randomRecipientIndex = rand() % (int)person.size() + 1;

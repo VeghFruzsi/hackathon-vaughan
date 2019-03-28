@@ -12,5 +12,6 @@
 
 std::vector<Person> readFromPersonFile(std::string fileName);
 std::vector<Tower> readFromTowerFile(std::string fileName);
+std::vector<BaseStation> readFromBaseStationFile(std::string fileName);
 
 #endif //HACKATHON_VAUGHAN_READFROMFILE_H

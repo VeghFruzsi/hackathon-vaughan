@@ -19,7 +19,7 @@ void Tower::setTowerID(int towerID) {
     Tower::towerID = towerID;
 }
 
-std::string Tower::getTowerLocation() const {
+std::string Tower::getTowerLocationString() const {
     std::string location;
     switch
             (towerLocation) {
@@ -113,4 +113,8 @@ const std::string &Tower::getTowerBuffer() const {
 
 void Tower::setTowerBuffer(const std::string &towerBuffer) {
     Tower::towerBuffer = towerBuffer;
+}
+
+County Tower::getTowerLocation() const {
+    return towerLocation;
 }

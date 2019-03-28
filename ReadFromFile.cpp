@@ -7,6 +7,7 @@ std::vector<Person> readFromPersonFile(std::string fileName){
         std::cout << "Open\n" << std::endl;
     } else {
         std::cout << "Your file is closed" << std::endl;
+        exit(EXIT_FAILURE);
     }
     std::string line;
     while (std::getline(file, line)) {
@@ -72,9 +73,9 @@ std::vector<Person> readFromPersonFile(std::string fileName){
         person.push_back(person1);
     }
 
-    for (int i = 0; i <person.size() ; ++i) {
+    /*for (int i = 0; i <person.size() ; ++i) {
         std::cout << i << ":" << person[i].getName() << ", " << person[i].getNumber() << ", " <<person[i].getPersonLocation() << std::endl;
-    }
+    }*/
     file.close();
     return person;
 }
@@ -86,7 +87,7 @@ std::vector<Tower> readFromTowerFile(std::string fileName){
         std::cout << "Open\n" << std::endl;
     } else {
         std::cout << "Your file is closed" << std::endl;
-        throw 2;
+        exit(EXIT_FAILURE);
     }
 
     std::string line;
@@ -148,9 +149,49 @@ std::vector<Tower> readFromTowerFile(std::string fileName){
         }
         towerVector.push_back(tower1);
     }
-    for (int i = 0; i <towerVector.size() ; ++i) {
+    /*for (int i = 0; i <towerVector.size() ; ++i) {
         std::cout << i << ":" << towerVector[i].getTowerID() << ", " << towerVector[i].getTowerLocation() << std::endl;
-    }
+    }*/
     file.close();
     return towerVector;
+}
+
+std::vector<BaseStation> readFromBaseStationFile(std::string fileName)
+{
+    std::vector<BaseStation> baseStationVector;
+    std::ifstream file(fileName);
+    if (file.is_open()) {
+        std::cout << "Open\n" << std::endl;
+    } else {
+        std::cout << "Your file is closed" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
+    std::string line;
+    while (std::getline(file, line)) {
+        std::istringstream stringStream(line);
+
+        BaseStation base1;
+
+        std::string id;
+        std::getline(stringStream, id, ',');
+        int baseID = std::stoi(id);
+        base1.setBaseID(baseID);
+
+        std::string region;
+        std::getline(stringStream, region, ',');
+        if(region == "Dunantul"){
+            base1.setBaseStationLocation(Region::DUNANTUL);
+        }else if(region == "Dunatiszakoze"){
+            base1.setBaseStationLocation(Region::DUNATISZAKOZE);
+        }else if(region == "Tiszantul"){
+            base1.setBaseStationLocation(Region::TISZANTUL);
+        }else{
+            base1.setBaseStationLocation(Region::INVALID);
+        }
+
+        baseStationVector.push_back(base1);
+    }
+
+    return baseStationVector;
 }

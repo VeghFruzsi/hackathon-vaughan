@@ -25,7 +25,7 @@ std::string Person::answeringACall(std::string input) {
     return std::__cxx11::string();
 }
 
-std::string Person::getPersonLocation() const {
+std::string Person::getPersonLocationString() const {
     std::string location;
     switch
             (personLocation) {
@@ -105,4 +105,16 @@ const std::string &Person::getNumber() const
 void Person::setNumber(const std::string &number)
 {
     Person::number = number;
+}
+
+const std::string &Person::getPersonBuffer() const {
+    return personBuffer;
+}
+
+void Person::setPersonBuffer(const std::string &personBuffer) {
+    Person::personBuffer = personBuffer;
+}
+
+County Person::getPersonLocation() const {
+    return personLocation;
 }

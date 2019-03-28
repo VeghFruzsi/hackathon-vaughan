@@ -25,9 +25,10 @@ enum class County {
 };
 
 enum class Region {
-    Dunantul,
-    DunaTiszaKoze,
-    Tiszantul,
+    DUNANTUL,
+    DUNATISZAKOZE,
+    TISZANTUL,
+    INVALID
 
 };
 

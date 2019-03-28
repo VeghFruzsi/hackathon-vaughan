@@ -72,7 +72,7 @@ std::vector<Person> readFromPersonFile(std::string fileName){
         }
         person.push_back(person1);
     }
-    for (int i = 0; i <person.size() ; ++i) {
+    for (int i = 0; i < person.size() ; ++i) {
         std::cout << i << ":" << person[i].getName() << ", " << person[i].getNumber() << ", " <<person[i].getPersonLocation() << std::endl;
     }
     file.close();

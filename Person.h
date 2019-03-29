@@ -12,9 +12,6 @@ public:
     Person(const std::string &name, const std::string &number, County personLocation, int towerToPersonID);
     Person(const std::string &name);
 
-    std::string makingACall(std::string input);
-    std::string answeringACall(std::string input);
-
     const std::string &getName() const;
     void setName(const std::string &name);
 

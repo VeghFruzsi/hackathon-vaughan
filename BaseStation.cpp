@@ -8,17 +8,6 @@ BaseStation::BaseStation(Region baseStationLocation, int towersToBaseStation) : 
 
 }
 
-void BaseStation::chooseATower() {
-
-}
-
-void BaseStation::callToTower(std::string buffer) {
-    std::cout << "the call from base is enroute tho recieving tower " << buffer << std::endl;
-}
-
-void BaseStation::callToBaseStation(std::string buffer) {
-    std::cout << "the call from base is enroute tho another base" << buffer << std::endl;
-}
 
 Region BaseStation::getBaseStationLocation() const {
     return baseStationLocation;
@@ -28,13 +17,6 @@ void BaseStation::setBaseStationLocation(Region baseStationLocation) {
     BaseStation::baseStationLocation = baseStationLocation;
 }
 
-int BaseStation::getTowersToBaseStation() const {
-    return towersToBaseStation;
-}
-
-void BaseStation::setTowersToBaseStation(int towersToBaseStation) {
-    BaseStation::towersToBaseStation = towersToBaseStation;
-}
 
 const std::string &BaseStation::getBaseStationBuffer() const {
     return BaseStationBuffer;
@@ -50,6 +32,25 @@ int BaseStation::getBaseID() const {
 
 void BaseStation::setBaseID(int baseID) {
     BaseStation::baseID = baseID;
+}
+
+std::string BaseStation::getBaseStationLocationString() {
+    std::string location;
+    switch(baseStationLocation){
+        case Region::DUNANTUL:
+            location="Dunantul";
+            break;
+        case Region::DUNATISZAKOZE:
+            location="Dunatiszakoze";
+            break;
+        case Region::TISZANTUL :
+            location="Tiszantul";
+            break;
+        case Region::INVALID :
+            location="Invalid";
+            break;
+    }
+    return location;
 }
 
 

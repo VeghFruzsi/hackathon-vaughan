@@ -10,19 +10,10 @@ public:
 
     BaseStation(Region baseStationLocation, int towersToBaseStation);
 
-    void chooseATower();
-
-    void callToTower(std::string buffer);
-
-    void callToBaseStation(std::string buffer);
 
     Region getBaseStationLocation() const;
 
     void setBaseStationLocation(Region baseStationLocation);
-
-    int getTowersToBaseStation() const;
-
-    void setTowersToBaseStation(int towersToBaseStation);
 
     const std::string &getBaseStationBuffer() const;
 
@@ -32,6 +23,7 @@ public:
 
     void setBaseID(int baseID);
 
+    std::string getBaseStationLocationString();
 protected:
     Region baseStationLocation;
     int towersToBaseStation;

@@ -8,7 +8,7 @@ class Tower {
 public:
     Tower();
 
-    Tower(int towerID, County towerLocation, const std::string &baseStation);
+    Tower(int towerID, County towerLocation);
 
     int getTowerID() const;
 
@@ -20,12 +20,6 @@ public:
 
     const std::string &getBaseStation() const;
 
-    void setBaseStation(const std::string &baseStation);
-
-    void callToBaseStation(std::string buffer);
-
-    void callToPerson(std::string buffer);
-
     const std::string &getTowerBuffer() const;
 
     void setTowerBuffer(const std::string &towerBuffer);
@@ -33,7 +27,6 @@ public:
 protected:
     int towerID;
     County towerLocation;
-    std::string baseStation;
     std::string towerBuffer;
 };
 

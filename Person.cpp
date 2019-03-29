@@ -13,14 +13,6 @@ void Person::setName(const std::string &name) {
     Person::name = name;
 }
 
-std::string Person::makingACall(std::string input) {
-    return std::__cxx11::string();
-}
-
-std::string Person::answeringACall(std::string input) {
-    return std::__cxx11::string();
-}
-
 std::string Person::getPersonLocationString() const {
     std::string location;
     switch

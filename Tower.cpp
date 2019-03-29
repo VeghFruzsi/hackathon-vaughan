@@ -3,9 +3,8 @@
 
 Tower::Tower() {}
 
-Tower::Tower(int towerID, County towerLocation, const std::string &baseStation) : towerID(towerID),
-                                                                                         towerLocation(towerLocation),
-                                                                                         baseStation(baseStation) {}
+Tower::Tower(int towerID, County towerLocation) : towerID(towerID),
+                                                  towerLocation(towerLocation) {}
 
 int Tower::getTowerID() const {
     return towerID;
@@ -85,22 +84,6 @@ std::string Tower::getTowerLocationString() const {
 
 void Tower::setTowerLocation(County towerLocation) {
     Tower::towerLocation = towerLocation;
-}
-
-const std::string &Tower::getBaseStation() const {
-    return baseStation;
-}
-
-void Tower::setBaseStation(const std::string &baseStation) {
-    Tower::baseStation = baseStation;
-}
-
-void Tower::callToBaseStation(std::string buffer) {
-    std::cout << "call from tower is enroute to base station : " << buffer << std::endl;
-}
-
-void Tower::callToPerson(std::string buffer) {
-
 }
 
 const std::string &Tower::getTowerBuffer() const {

@@ -15,7 +15,7 @@ void conversation(std::vector<std::string> sentences, std::vector<Person> person
 
 
     int randomSalute = rand() % 3;
-
+    std::cin.get();
     call(caller, recipient, baseStationVector, towerVector, sentences[randomSalute]);
     switchCallerReciever(caller, recipient);
     std::cin.get();

@@ -81,7 +81,7 @@ std::vector<Tower> readFromTowerFile(std::string fileName){
     std::vector<Tower> towerVector;
     std::ifstream file(fileName);
     if (file.is_open()) {
-        std::cout << "Local ransmission towers activated.\n" << std::endl;
+        std::cout << "Local transmission towers activated.\n" << std::endl;
     } else {
         std::cout << "Your file is closed" << std::endl;
         exit(EXIT_FAILURE);

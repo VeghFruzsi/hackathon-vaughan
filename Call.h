@@ -8,9 +8,11 @@
 #include <iostream>
 #include <vector>
 
-void call(std::vector<Person> person, std::vector<BaseStation> baseStationVector, std::vector<Tower> towerVector, std::string input);
+void call(Person caller, Person recipient, std::vector<BaseStation> baseStationVector, std::vector<Tower> towerVector, std::string input);
 
 BaseStation getBaseOfTower(Tower tower1, std::vector<BaseStation> baseStationVector);
+
+void switchCallerReciever(Person &caller, Person &recipient);
 
 
 #endif //HACKATHON_VAUGHAN_CALL_H

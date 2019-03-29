@@ -20,11 +20,7 @@ int main()
     std::vector<std::string> peopleConversation = readFromConversation("../conversation.txt");
     std::vector<BaseStation> baseStationVector = readFromBaseStationFile("../basestation.txt");
 
-    std::string input = "izebizegizike";
-
-    call(person, baseStationVector, towerVector, input);
-
-    conversation(peopleConversation);
+    conversation(peopleConversation, person, baseStationVector, towerVector);
 
     return 0;
 }

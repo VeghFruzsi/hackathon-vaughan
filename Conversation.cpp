@@ -1,33 +1,65 @@
 #include "Conversation.h"
 
-void conversation(std::vector<std::string> sentences)
+void conversation(std::vector<std::string> sentences, std::vector<Person> person, std::vector<BaseStation> baseStationVector, std::vector<Tower> towerVector)
 {
+    int randomCallerIndex;
+    int randomRecipientIndex;
+    do {
+        randomCallerIndex = rand() % (int)person.size() - 1;
+        randomRecipientIndex = rand() % (int)person.size() - 1;
+    }
+    while (randomCallerIndex == randomRecipientIndex);
+
+    Person caller = person[randomCallerIndex];
+    Person recipient = person[randomRecipientIndex];
+
+
     int randomSalute = rand() % 3;
-    std::cout << "Caller: " << sentences[randomSalute] << std::endl;
+
+    call(caller, recipient, baseStationVector, towerVector, sentences[randomSalute]);
+    switchCallerReciever(caller, recipient);
+    std::cin.get();
+
     randomSalute = rand() % 3;
-    std::cout << "Recipient: " << sentences[randomSalute] << std::endl;
+    call(caller, recipient, baseStationVector, towerVector, sentences[randomSalute]);
+    switchCallerReciever(caller, recipient);
+    std::cin.get();
 
     int randomHowAreYou = rand() % 3 + 3;
-    std::cout << "Caller: " << sentences[randomHowAreYou] << std::endl;
-    randomHowAreYou = rand() % 3 + 6;
-    std::cout << "Recipient: " << sentences[randomHowAreYou] << std::endl;
+    call(caller, recipient, baseStationVector, towerVector, sentences[randomHowAreYou]);
+    switchCallerReciever(caller, recipient);
+    std::cin.get();
 
-    std::cout << "Caller: " << sentences[9] << std::endl;
+    randomHowAreYou = rand() % 3 + 6;
+    call(caller, recipient, baseStationVector, towerVector, sentences[randomHowAreYou]);
+    switchCallerReciever(caller, recipient);
+    std::cin.get();
+
+    call(caller, recipient, baseStationVector, towerVector, sentences[9]);
+    switchCallerReciever(caller, recipient);
+    std::cin.get();
 
     int plan = rand() % 3 + 10;
-    std::cout << "Recipient: " << sentences[plan] << std::endl;
+    call(caller, recipient, baseStationVector, towerVector, sentences[plan]);
+    switchCallerReciever(caller, recipient);
+    std::cin.get();
 
-    std::cout << "Caller: " << sentences[13] << std::endl;
+    call(caller, recipient, baseStationVector, towerVector, sentences[13]);
+    switchCallerReciever(caller, recipient);
+    std::cin.get();
 
     int mood = rand() % 3 + 14;
-    std::cout << "Recipient: " << sentences[mood] << std::endl;
+    call(caller, recipient, baseStationVector, towerVector, sentences[mood]);
+    switchCallerReciever(caller, recipient);
+    std::cin.get();
 
     int bye = rand() % 4 + 17;
-    std::cout << "Caller: " << sentences[bye] << std::endl;
-    bye = rand() % 4 + 17;
-    std::cout << "Recipient: " << sentences[bye] << std::endl;
+    call(caller, recipient, baseStationVector, towerVector, sentences[bye]);
+    switchCallerReciever(caller, recipient);
+    std::cin.get();
 
-    /*for (int i = 0; i <sentences.size() ; ++i) {
-        std::cout << i << ":" << sentences[i] << "\n" << std::endl;
-    }*/
+    bye = rand() % 4 + 17;
+    call(caller, recipient, baseStationVector, towerVector, sentences[bye]);
+    switchCallerReciever(caller, recipient);
+    std::cin.get();
 }

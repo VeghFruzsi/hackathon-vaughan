@@ -7,23 +7,18 @@
 class BaseStation {
 public:
     BaseStation();
-
     BaseStation(Region baseStationLocation, int towersToBaseStation);
 
-
     Region getBaseStationLocation() const;
-
     void setBaseStationLocation(Region baseStationLocation);
+    std::string getBaseStationLocationString();
 
     const std::string &getBaseStationBuffer() const;
-
     void setBaseStationBuffer(const std::string &BaseStationBuffer);
 
     int getBaseID() const;
-
     void setBaseID(int baseID);
 
-    std::string getBaseStationLocationString();
 protected:
     Region baseStationLocation;
     int towersToBaseStation;

@@ -4,7 +4,7 @@ std::vector<Person> readFromPersonFile(std::string fileName){
     std::vector<Person> person;
     std::ifstream file(fileName);
     if (file.is_open()) {
-        std::cout << "Open\n" << std::endl;
+        std::cout << "Telephone book opened.\n" << std::endl;
     } else {
         std::cout << "Your file is closed" << std::endl;
         exit(EXIT_FAILURE);
@@ -73,9 +73,6 @@ std::vector<Person> readFromPersonFile(std::string fileName){
         person.push_back(person1);
     }
 
-    /*for (int i = 0; i <person.size() ; ++i) {
-        std::cout << i << ":" << person[i].getName() << ", " << person[i].getNumber() << ", " <<person[i].getPersonLocation() << std::endl;
-    }*/
     file.close();
     return person;
 }
@@ -84,7 +81,7 @@ std::vector<Tower> readFromTowerFile(std::string fileName){
     std::vector<Tower> towerVector;
     std::ifstream file(fileName);
     if (file.is_open()) {
-        std::cout << "Open\n" << std::endl;
+        std::cout << "Local ransmission towers activated.\n" << std::endl;
     } else {
         std::cout << "Your file is closed" << std::endl;
         exit(EXIT_FAILURE);
@@ -149,9 +146,6 @@ std::vector<Tower> readFromTowerFile(std::string fileName){
         }
         towerVector.push_back(tower1);
     }
-    /*for (int i = 0; i <towerVector.size() ; ++i) {
-        std::cout << i << ":" << towerVector[i].getTowerID() << ", " << towerVector[i].getTowerLocation() << std::endl;
-    }*/
     file.close();
     return towerVector;
 }
@@ -161,7 +155,7 @@ std::vector<BaseStation> readFromBaseStationFile(std::string fileName)
     std::vector<BaseStation> baseStationVector;
     std::ifstream file(fileName);
     if (file.is_open()) {
-        std::cout << "Open\n" << std::endl;
+        std::cout << "Base stations activated.\n" << std::endl;
     } else {
         std::cout << "Your file is closed" << std::endl;
         exit(EXIT_FAILURE);
@@ -192,15 +186,15 @@ std::vector<BaseStation> readFromBaseStationFile(std::string fileName)
 
         baseStationVector.push_back(base1);
     }
-
     return baseStationVector;
 }
+
 std::vector<std::string> readFromConversation(std::string fileName){
     std::vector<std::string> sentences;
 
     std::ifstream file(fileName);
     if (file.is_open()) {
-        std::cout << "Open\n" << std::endl;
+        std::cout << "Ring ... Ring ... Ring    (press ENTER to answer)\n" << std::endl;
     } else {
         std::cout << "Your file is closed" << std::endl;
     }

@@ -15,10 +15,10 @@
 int main()
 {
     srand(time(NULL));
-    std::vector<Person> person = readFromPersonFile("../person.txt");
-    std::vector<Tower> towerVector = readFromTowerFile("../tower.txt");
-    std::vector<std::string> peopleConversation = readFromConversation("../conversation.txt");
     std::vector<BaseStation> baseStationVector = readFromBaseStationFile("../basestation.txt");
+    std::vector<Tower> towerVector = readFromTowerFile("../tower.txt");
+    std::vector<Person> person = readFromPersonFile("../person.txt");
+    std::vector<std::string> peopleConversation = readFromConversation("../conversation.txt");
 
     conversation(peopleConversation, person, baseStationVector, towerVector);
 

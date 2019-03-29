@@ -8,7 +8,6 @@ BaseStation::BaseStation(Region baseStationLocation, int towersToBaseStation) : 
 
 }
 
-
 Region BaseStation::getBaseStationLocation() const {
     return baseStationLocation;
 }
@@ -16,7 +15,6 @@ Region BaseStation::getBaseStationLocation() const {
 void BaseStation::setBaseStationLocation(Region baseStationLocation) {
     BaseStation::baseStationLocation = baseStationLocation;
 }
-
 
 const std::string &BaseStation::getBaseStationBuffer() const {
     return BaseStationBuffer;
@@ -52,6 +50,3 @@ std::string BaseStation::getBaseStationLocationString() {
     }
     return location;
 }
-
-
-

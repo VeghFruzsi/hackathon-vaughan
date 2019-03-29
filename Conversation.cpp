@@ -13,7 +13,6 @@ void conversation(std::vector<std::string> sentences, std::vector<Person> person
     Person caller = person[randomCallerIndex];
     Person recipient = person[randomRecipientIndex];
 
-
     int randomSalute = rand() % 3;
     std::cin.get();
     call(caller, recipient, baseStationVector, towerVector, sentences[randomSalute]);

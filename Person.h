@@ -33,4 +33,5 @@ protected:
     std::string personBuffer;
 };
 
+
 #endif //HACKATHON_VAUGHAN_PERSON_H

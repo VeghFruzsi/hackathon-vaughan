@@ -7,21 +7,16 @@
 class Tower {
 public:
     Tower();
-
     Tower(int towerID, County towerLocation);
 
     int getTowerID() const;
-
     void setTowerID(int towerID);
 
     std::string getTowerLocationString() const;
     County getTowerLocation() const;
     void setTowerLocation(County towerLocation);
 
-    const std::string &getBaseStation() const;
-
     const std::string &getTowerBuffer() const;
-
     void setTowerBuffer(const std::string &towerBuffer);
 
 protected:
@@ -29,5 +24,6 @@ protected:
     County towerLocation;
     std::string towerBuffer;
 };
+
 
 #endif //HACKATHON_VAUGHAN_TOWER_H

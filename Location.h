@@ -29,7 +29,6 @@ enum class Region {
     DUNATISZAKOZE,
     TISZANTUL,
     INVALID
-
 };
 
 

@@ -32,12 +32,15 @@ public:
 
     void setBaseStationBuffer(const std::string &BaseStationBuffer);
 
+    int getBaseID() const;
+
+    void setBaseID(int baseID);
+
 protected:
     Region baseStationLocation;
     int towersToBaseStation;
     std::string BaseStationBuffer;
-
-
+    int baseID;
 };
 
 

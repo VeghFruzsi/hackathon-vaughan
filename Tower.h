@@ -18,8 +18,8 @@ public:
 
     void setTowerID(int towerID);
 
-    std::string getTowerLocation() const;
-
+    std::string getTowerLocationString() const;
+    County getTowerLocation() const;
     void setTowerLocation(County towerLocation);
 
     const std::string &getBaseStation() const;

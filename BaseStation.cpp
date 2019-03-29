@@ -48,5 +48,13 @@ void BaseStation::setBaseStationBuffer(const std::string &BaseStationBuffer) {
     BaseStation::BaseStationBuffer = BaseStationBuffer;
 }
 
+int BaseStation::getBaseID() const {
+    return baseID;
+}
+
+void BaseStation::setBaseID(int baseID) {
+    BaseStation::baseID = baseID;
+}
+
 
 

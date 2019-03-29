@@ -12,34 +12,19 @@ void call(Person caller, Person recipient, std::vector<BaseStation> baseStationV
         Beep(1800,600);
         Sleep(100);
         std::cout << "The Caller is in: " << "|||" << caller.getPersonLocationString() << "|||" << std::endl;
-        Beep(1800,600);
-        Sleep(100);
         std::cout << "the recipient is in: " << "|||" << recipient.getPersonLocationString() << "|||" << std::endl;
-        Beep(1800,600);
-        Sleep(100);
         std::cout << "The Caller tower is in:  " << "&&&" << callerTower.getTowerLocationString() << "&&&" << std::endl;
-        Beep(1800,600);
-        Sleep(100);
         std::cout << "The call using the same tower which is in: "<< "&&&" << callerTower.getTowerLocationString()<< "&&&" << std::endl;
-
     } else {
         BaseStation baseStation = getBaseOfTower(callerTower, baseStationVector);
         Beep(1800,600);
         Sleep(100);
         std::cout << "The Caller is in " << "|||" << caller.getPersonLocationString() << "|||" << std::endl;
-        Beep(1800,600);
-        Sleep(100);
         std::cout << "The Recipient is in: " << "|||" << recipient.getPersonLocationString() << "|||" << std::endl;
         baseStation.setBaseStationBuffer(callerTower.getTowerBuffer());
-        Beep(1800,600);
-        Sleep(100);
         std::cout << "The Caller tower is in: " << "&&&" << callerTower.getTowerLocationString() << "&&&" << std::endl;
-        Beep(1800,600);
-        Sleep(100);
         std::cout << "The Caller basestation location is: " << "@@@" << baseStation.getBaseStationLocationString()
                   << "@@@" << std::endl;
-        Beep(1800,600);
-        Sleep(100);
         for (int i = 0; i < towerVector.size(); ++i) {
             if (towerVector[i].getTowerLocation() == recipient.getPersonLocation()) {
                 Beep(1800,600);
@@ -56,8 +41,6 @@ void call(Person caller, Person recipient, std::vector<BaseStation> baseStationV
                     std::cout << "The call goes trough the same base station which is in: " << "@@@"
                               << baseStation.getBaseStationLocationString()
                               << "@@@" << std::endl;
-                    Beep(1800,600);
-                    Sleep(100);
                 } else {
                     getBaseOfTower(towerVector[i], baseStationVector).setBaseStationBuffer(
                             getBaseOfTower(callerTower, baseStationVector).getBaseStationBuffer());
@@ -68,8 +51,6 @@ void call(Person caller, Person recipient, std::vector<BaseStation> baseStationV
                     Sleep(100);
                     std::cout << "The call goes trough an other base station which is in: " << "@@@"
                               << baseStation.getBaseStationLocationString() << "@@@" << std::endl;
-                    Beep(1800,600);
-                    Sleep(100);
                 }
             }
         }
@@ -119,12 +100,12 @@ BaseStation getBaseOfTower(Tower tower1, std::vector<BaseStation> baseStationVec
             break;
 
         case County::INVALID:
-            Beep(1800,600);
-            Beep(1800,600);
-            Beep(1800,600);
+            Beep(1800,300);
+            Beep(1800,300);
+            Beep(1800,300);
             std::cout << "Wrong location is set in database for the tower with ID: " << tower1.getTowerID()
                       << std::endl;
-            break;
+            exit(EXIT_FAILURE);
     }
     return BaseStation();
 }

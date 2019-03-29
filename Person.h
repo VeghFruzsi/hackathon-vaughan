@@ -6,6 +6,9 @@
 
 class Person {
 public:
+    Person();
+
+public:
     Person(const std::string &name, const std::string &number, County personLocation, int towerToPersonID);
     Person(const std::string &name);
 

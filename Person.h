@@ -1,7 +1,3 @@
-//
-// Created by Titkos on 28/03/2019.
-//
-
 #ifndef HACKATHON_VAUGHAN_PERSON_H
 #define HACKATHON_VAUGHAN_PERSON_H
 
@@ -29,7 +25,6 @@ public:
     const std::string &getPersonBuffer() const;
     void setPersonBuffer(const std::string &personBuffer);
 
-
 protected:
     std::string name;
     std::string number;
@@ -37,6 +32,5 @@ protected:
     int towerToPersonID;
     std::string personBuffer;
 };
-
 
 #endif //HACKATHON_VAUGHAN_PERSON_H

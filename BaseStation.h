@@ -1,7 +1,3 @@
-//
-// Created by Titkos on 28/03/2019.
-//
-
 #ifndef HACKATHON_VAUGHAN_BASESTATION_H
 #define HACKATHON_VAUGHAN_BASESTATION_H
 
@@ -42,6 +38,5 @@ protected:
     std::string BaseStationBuffer;
     int baseID;
 };
-
 
 #endif //HACKATHON_VAUGHAN_BASESTATION_H

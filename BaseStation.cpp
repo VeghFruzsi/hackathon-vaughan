@@ -1,7 +1,3 @@
-//
-// Created by Titkos on 28/03/2019.
-//
-
 #include <iostream>
 #include "BaseStation.h"
 

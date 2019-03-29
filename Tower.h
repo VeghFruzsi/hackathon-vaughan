@@ -1,7 +1,3 @@
-//
-// Created by Titkos on 28/03/2019.
-//
-
 #ifndef HACKATHON_VAUGHAN_TOWER_H
 #define HACKATHON_VAUGHAN_TOWER_H
 
@@ -39,8 +35,6 @@ protected:
     County towerLocation;
     std::string baseStation;
     std::string towerBuffer;
-
 };
-
 
 #endif //HACKATHON_VAUGHAN_TOWER_H

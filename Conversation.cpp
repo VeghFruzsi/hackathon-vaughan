@@ -13,8 +13,34 @@ void conversation(std::vector<std::string> sentences, std::vector<Person> person
     Person caller = person[randomCallerIndex];
     Person recipient = person[randomRecipientIndex];
 
+    std::cout << caller.getName() << " is calling " << recipient.getName() << std::endl;
+
     int randomSalute = rand() % 3;
-    std::cin.get();
+
+    //======= PHONE RINGING ========//
+    Beep(220,300);
+    Beep(294,300);
+    Beep(294,300);
+    Beep(370,300);
+    Beep(494,300);
+    Beep(370,300);
+    Beep(440,800);
+    /* */
+    Beep(440,300);
+    Beep(494,300);
+    Beep(440,300);
+    Beep(370,300);
+    Beep(392,300);
+    Beep(370,300);
+    Beep(330,800);
+    /* */
+    Beep(247,300);
+    Beep(330,300);
+    Beep(330,300);
+    Beep(370,300);
+    Beep(555,300);
+    Beep(555,300);
+
     call(caller, recipient, baseStationVector, towerVector, sentences[randomSalute]);
     switchCallerReciever(caller, recipient);
     std::cin.get();
@@ -60,5 +86,8 @@ void conversation(std::vector<std::string> sentences, std::vector<Person> person
     bye = rand() % 4 + 17;
     call(caller, recipient, baseStationVector, towerVector, sentences[bye]);
     switchCallerReciever(caller, recipient);
-    std::cin.get();
+
+    for(int i = 0; i < 10; i++) {
+        Beep(523, 500);
+    }
 }

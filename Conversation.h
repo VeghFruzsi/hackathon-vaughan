@@ -5,6 +5,7 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+#include <windows.h>
 
 #include "BaseStation.h"
 #include "Person.h"

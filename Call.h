@@ -4,6 +4,7 @@
 #include "BaseStation.h"
 #include "Person.h"
 #include "Tower.h"
+#include <windows.h>
 
 #include <iostream>
 #include <vector>

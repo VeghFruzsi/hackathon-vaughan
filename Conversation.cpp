@@ -1,22 +1,7 @@
 #include "Conversation.h"
 
-std::vector<std::string> conversation(std::string fileName){
-    std::vector<std::string> sentences;
-
-    std::ifstream file(fileName);
-    if (file.is_open()) {
-        std::cout << "Open\n" << std::endl;
-    } else {
-        std::cout << "Your file is closed" << std::endl;
-    }
-    std::string sentence;
-    int line = 0;
-    while ( getline (file,sentence) )
-    {
-        sentences.push_back(sentence);
-        line++;
-    }
-
+void conversation(std::vector<std::string> sentences)
+{
     int randomSalute = rand() % 3;
     std::cout << "Caller: " << sentences[randomSalute] << std::endl;
     randomSalute = rand() % 3;
@@ -45,8 +30,4 @@ std::vector<std::string> conversation(std::string fileName){
     /*for (int i = 0; i <sentences.size() ; ++i) {
         std::cout << i << ":" << sentences[i] << "\n" << std::endl;
     }*/
-    file.close();
-    return sentences;
-
 }
-

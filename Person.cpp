@@ -114,3 +114,5 @@ void Person::setPersonBuffer(const std::string &personBuffer) {
 County Person::getPersonLocation() const {
     return personLocation;
 }
+
+Person::Person() {}

@@ -195,3 +195,22 @@ std::vector<BaseStation> readFromBaseStationFile(std::string fileName)
 
     return baseStationVector;
 }
+std::vector<std::string> readFromConversation(std::string fileName){
+    std::vector<std::string> sentences;
+
+    std::ifstream file(fileName);
+    if (file.is_open()) {
+        std::cout << "Open\n" << std::endl;
+    } else {
+        std::cout << "Your file is closed" << std::endl;
+    }
+    std::string sentence;
+    int line = 0;
+    while ( getline (file,sentence) )
+    {
+        sentences.push_back(sentence);
+        line++;
+    }
+    file.close();
+    return sentences;
+}

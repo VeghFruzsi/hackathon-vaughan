@@ -11,7 +11,7 @@
 #include "Tower.h"
 #include "Location.h"
 
-std::vector<std::string> conversation(std::string fileName);
+void conversation(std::vector<std::string> sentences);
 
 
 #endif //HACKATHON_VAUGHAN_CONVERSATION_H

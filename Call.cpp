@@ -5,7 +5,7 @@ void call(Person caller, Person recipient, std::vector<BaseStation> baseStationV
     Tower callerTower;
 
     callerTower.setTowerBuffer(input);
-    std::cout << "Message: " << "####  " << input << "  ####" << std::endl;
+    std::cout << caller.getName() << ": " << "####  " << input << "  ####" << std::endl;
     callerTower.setTowerLocation(caller.getPersonLocation());
     if (caller.getPersonLocation() == recipient.getPersonLocation()) {
         recipient.setPersonBuffer(callerTower.getTowerBuffer());
